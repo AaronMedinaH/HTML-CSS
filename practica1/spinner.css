@@ -1,0 +1,61 @@
+
+.spinner_container{
+    display: flex;
+    margin:100px auto;
+    width: 500px;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.spinner_container .base_container{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 4s;
+}
+.spinner_container .base_container .spinner_base{
+    position: absolute;
+    background-color: rgb(255, 111, 28);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.spinner_container .base_container .spinner_middle{
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.spinner_container .base_container .spinner_circle1{
+    position: absolute;
+    background-color: rgb(255, 111, 28);
+    color: rgb(255, 111, 28);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    top:-60px;
+    left: -110px;
+    box-shadow: 220px 0,110px 185px;
+}
+.spinner_container .base_container .spinner_circle1 .center_circle{
+    position: absolute;
+    background-color: rgb(19,19,19);
+    color: rgb(19, 19, 19);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    top:30px;
+    left: 32px;
+    box-shadow: 220px 0,110px 185px;
+}
+
+.spinner_container .base_container:hover{
+    transform: rotate(3600deg) ;
+
+}

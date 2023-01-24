@@ -1,0 +1,116 @@
+header{
+min-height: 70px;
+background-color: rgb(255, 61, 2);  
+display: flex;
+/*DIVIDE LOS ELEMENTOS EN BLOQUES SEGÚN HTML*/
+justify-content: space-between;
+align-items: center;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 100%;
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+.cont_header{
+    z-index: 1;
+    margin-left: 20px;
+}
+.cont_header .logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 10px;
+}
+.logo img{
+    height: 80px;
+}
+.logo::before{
+    content: "";
+    position: absolute;
+    top: 10;
+    left: 92px;
+    z-index: -1;
+    width: 70%;
+    height: 40%;
+    background: linear-gradient(
+        45deg,
+        transparent,red,orange,red,
+        transparent, red, orange,red
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite ;
+}
+nav a{
+    position: relative;
+    font-weight: 600;
+    padding-right: 10px;
+    z-index: 1;
+}
+.line_navbar{
+    background: black;
+    height: 40px;
+    width: 8px;
+    margin-right: 8px;
+}
+.line_navbar2{
+    position: relative;
+    top: -10px;
+    left: -30px;
+    background: black;
+    background-color: black;
+    height: 0px;
+    width: 0px;
+}
+.cont_header{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-direction: column;
+}
+nav a:hover{
+     color:coral;
+}
+@media (max-width:680px){
+    header{
+        flex-direction: column;
+    }
+    nav{
+        padding: 10px 0px;
+    }
+    .line_navbar{
+        width: 0;
+        padding-right: 0;
+    }
+    
+    .line_navbar2{
+        background: black;
+        height: 8px;
+        width: 26vh;
+    }
+}
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }    
+
+    50% {
+        background-position: 400% 0;
+    }  
+
+    100% {
+        background-position: 0 0;
+    }  
+}
+
+
